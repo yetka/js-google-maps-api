@@ -5,21 +5,25 @@ $(document).ready(function() {
   $("#coordinates-form").submit(function(event) {
     event.preventDefault();
 
-    let latitude = $("#latitude").val();
-    let longitude = $("#longitude").val();
+    let latitude = parseInt($("#latitude").val());
+    let longitude = parseInt($("#longitude").val());
     let newPlace = new Place(latitude, longitude);
 
-    function initMap() {
-      var uluru = {lat: -25.363, lng: 131.044};
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: uluru
-      });
-      var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
+    function location(place) {
+      var userLatLng = new google.maps.LatLng(place.latitude, place.longitude);
+
+      var myOptions = {
+        zoom : 16,
+        center : userLatLng,
+        mapTypeId : google.maps.MapTypeId.ROADMAP
+      };
+      var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
+      new google.maps.Marker({
+        map: mapObject,
+        position: userLatLng
       });
     }
 
+    location(newPlace);
   });
 });
