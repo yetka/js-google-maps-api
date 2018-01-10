@@ -2,13 +2,33 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <title></title>
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwSdWR15ZNoTDzZqWSMgYLBtPdwLMBgVQ&callback=initMap">
+    </script>
+    <title>Geographic coordinate system</title>
   </head>
   <body>
     <div class="container">
-      
+      <h1 class="jumbotron">Geographic coordinate system</h1>
+      <h3>A geographic coordinate system is a coordinate system used in geography that enables every location on Earth to be specified by a set of numbers, letters or symbols. The coordinates are often chosen such that one of the numbers represents a vertical position, and two or three of the numbers represent a horizontal position. A common choice of coordinates is latitude, longitude and elevation</h3>
+      <h2>Provide latitude and longitude to see a specific position on a map:</h2>
+      <form id="coordinates-form">
+        <h3>Enter a latitude: </h3>
+        <div class="form-group">
+          <input type="text" class="form-control" id="latitude">
+        </div>
+        <h3>Enter a longitude: </h3>
+        <div class="form-group">
+          <input type="text" class="form-control" id="longitude">
+        </div>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+      <h3>Map position:</h3>
+      <div id="map"></div>
     </div>
   </body>
 </html>
