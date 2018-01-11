@@ -25,8 +25,20 @@
         </div>
         <button type="submit" class="btn-primary">Submit</button>
       </form>
-      <h3>Map position:</h3>
-      <div id="map"></div>
+      <div class="map-view">
+        <h3>Map position:</h3>
+        <div id="map"></div>
+      </div>
+      <div class="location-info">
+        <div class="success-info">
+          <h4>Information about place you chose:</h4>
+          <ul>
+            <li>City Name: <span id="name"></span></li>
+            <li>Country: <span id="country"></span></li>
+          </ul>
+        </div>
+        <h3><span id="errors"></span></h3>        
+      </div>
     </div>
   </body>
 </html>
