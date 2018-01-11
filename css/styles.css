@@ -2,7 +2,6 @@ body {
   background-color: #f2f2f2;
 }
 
-
 #map {
   height: 400px;
   width: 100%;
@@ -28,4 +27,8 @@ hr {
 
 .success-info em {
   font-size: 16px;
+}
+
+.form-control {
+  width: 200px;
 }
