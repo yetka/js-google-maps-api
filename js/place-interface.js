@@ -1,5 +1,6 @@
 import { Place } from './../js/place.js';
 import { location } from './../js/place.js';
+var apiUserName = require('./../.env').apiUserName;
 
 
 $(document).ready(function() {
@@ -15,7 +16,7 @@ $(document).ready(function() {
     location(newPlace);
 
     $.ajax({
-      url: `http://api.geonames.org/findNearbyPlaceNameJSON?lat=${latitude}&lng=${longitude}&username=gosikh `,
+      url: `http://api.geonames.org/findNearbyPlaceNameJSON?lat=${latitude}&lng=${longitude}&username=${apiUserName} `,
       type: 'GET',
       data: {
         format: 'json'

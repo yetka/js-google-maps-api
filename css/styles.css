@@ -6,3 +6,7 @@
 .map-view, .location-info {
   display: none;
 }
+
+ul {
+  font-size: 18px;
+}
