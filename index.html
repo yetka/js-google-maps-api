@@ -11,26 +11,36 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="jumbotron">Geographic coordinate system</h1>
-      <h4>A geographic coordinate system is a coordinate system used in geography that enables every location on Earth to be specified by a set of numbers, letters or symbols. The coordinates are often chosen such that one of the numbers represents a vertical position, and two or three of the numbers represent a horizontal position. A common choice of coordinates is latitude, longitude and elevation</h4>
+      <h1 class="jumbotron">Geographic Coordinate System</h1>
+      <h4>A geographic coordinate system is a system used in geography that enables every location on Earth to be specified by a set of numbers, letters or symbols.</h4>
+      <h4>The coordinates are often chosen such that one of the numbers represents a vertical position, and two or three of the numbers represent a horizontal position. A common choice of coordinates is latitude, longitude and elevation.</h4>
+      <br>
+      <br>
+      <h4>Most common coordinates:</h4>
       <ul>
-        <li>The "latitude" (abbreviation: Lat., φ, or phi) of a point on Earth's surface is the angle between the equatorial plane and the straight line that passes through that point and through (or close to) the center of the Earth</li>
-        <li>The "longitude" (abbreviation: Long., λ, or lambda) of a point on Earth's surface is the angle east or west of a reference meridian to another meridian that passes through that point.</li>
+        <li><em>latitude:</em> (abbreviation: Lat., φ, or phi) The angular distance of a place north or south of the earth's equator. Latitude is measured in degrees north or positive degrees, and degrees south or negative degrees.</li>
+        <li><em>longitude:</em> (abbreviation: Long., λ, or lambda) The angular distance of a place east or west of the meridian at Greenwich, England, or west of the standard meridian of a celestial object. A positive number implies east, a negative one implies west.</li>
       </ul>
+      <br>
+      <br>
+      <hr>
       <h2>Provide latitude and longitude to see a specific position on a map:</h2>
       <form id="coordinates-form">
         <h4>Enter a latitude: </h4>
+        <p>(numbers from 180.0 to -180.0)</p>
         <div class="form-group">
           <input type="text" class="form-control" id="latitude">
         </div>
         <h4>Enter a longitude: </h4>
+        <p>(numbers from 180.0 to -180.0)</p>
         <div class="form-group">
           <input type="text" class="form-control" id="longitude">
         </div>
         <button type="submit" class="btn-primary">Submit</button>
       </form>
+      <hr>
       <div class="map-view">
-        <h3>Map position:</h3>
+        <h3>Position on the map:</h3>
         <div id="map"></div>
       </div>
       <br>
@@ -39,10 +49,10 @@
         <div class="success-info">
           <h4>Information about the nearest city:</h4>
           <ul>
-            <li>City Name: <span id="name"></span></li>
-            <li>Country: <span id="country"></span></li>
-            <li>Actual temperature in Celcius: <span id="temperature"></span></li>
-            <li>Actual weather: <span id="weather"></span></li>
+            <li><em>City Name:</em> <span id="name"></span></li>
+            <li><em>Country:</em> <span id="country"></span></li>
+            <li><em>Actual temperature in Celcius:</em> <span id="temperature"></span> degrees</li>
+            <li><em>Actual weather:</em> <span id="weather"></span></li>
           </ul>
         </div>
         <h3><span id="errors"></span></h3>

@@ -1,3 +1,8 @@
+body {
+  background-color: #f2f2f2;
+}
+
+
 #map {
   height: 400px;
   width: 100%;
@@ -9,4 +14,18 @@
 
 ul {
   font-size: 18px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #b3b3b3;
+}
+
+hr {
+  background-color: darkgray;
+  height: 5px;
+}
+
+.success-info em {
+  font-size: 16px;
 }
