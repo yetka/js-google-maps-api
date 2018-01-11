@@ -1,6 +1,8 @@
 import { Place } from './../js/place.js';
 import { location } from './../js/place.js';
+import { kelvinToCelcius } from './../js/place.js';
 var apiUserName = require('./../.env').apiUserName;
+var apiKey = require('./../.env').apiKey;
 
 
 $(document).ready(function() {
@@ -24,6 +26,24 @@ $(document).ready(function() {
       success: function(response) {
         $('#name').text(response.geonames[0].name);
         $('#country').text(response.geonames[0].countryName);
+      },
+
+      error: function() {
+        $('#errors').text("There was an error processing your request. Please try again.");
+      }
+    });
+
+    $.ajax({
+      url: `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}${apiKey}`,
+      type: 'GET',
+      data: {
+        format: 'json'
+      },
+      success: function(response) {
+        let kelvins = response.main.temp;
+        let celcius = kelvinToCelcius(kelvins);
+        $('#temperature').text(celcius);
+        $('#weather').text(response.weather[0].description);
       },
 
       error: function() {

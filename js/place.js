@@ -20,3 +20,7 @@ export function location(place) {
     position: userLatLng
   });
 }
+
+export function kelvinToCelcius(number) {
+  return Math.floor(number - 273.15);
+}
